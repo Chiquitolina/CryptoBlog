@@ -1,0 +1,20 @@
+@import './base.css';
+
+#ellipse {
+  height: 15rem;
+}
+
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../assets/fonts/LibreBarcode39Text-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: url('../assets/fonts/Inter.ttf');
+}
+
+.inter {
+  font-family: Inter;
+}
