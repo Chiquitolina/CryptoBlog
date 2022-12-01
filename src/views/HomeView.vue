@@ -41,7 +41,6 @@ onMounted(() => {
 
 <template style="background-color:black;">
 <div class="text-center position-absolute text-black w-100 text-center">
-  <p class="titulo">YOUR CRYPTO DATA ANALYITICS BLOG</p>
   </div>
     <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 13.5rem;">
   <main class=" text-white text-center" style="background-color: black;">
@@ -54,18 +53,22 @@ onMounted(() => {
     <table class="table table-hover table-dark">
   <thead style="border-radius: 54px;">
     <tr>
-      <th scope="col"></th>
-      <th scope="col">Name</th>
+      <th scope="col">Currency</th>
       <th scope="col">Price</th>
-      <th scope="col">24hs Price Change (%)</th>
+      
+      
     </tr>
   </thead>
   <tbody>
     <tr v-for="coin in popularess">
-      <th scope="row"><img v-bind:src="coin.image" style="width: 1.5rem"></th>
-      <td>{{coin.name}}</td>
-      <td>{{coin.current_price}}</td>
-      <td>{{coin.price_change_percentage_24h.toFixed(2)}}%</td>
+      <td>
+        <div class="d-flex flex-column align-items-center"><img v-bind:src="coin.image" style="width: 1.7rem; display: block;">
+        {{coin.name}}</div>
+      </td>
+
+      <td class="d-flex flex-column justify-content-center align-items-center h-100"><span>{{coin.current_price}}</span><span>({{coin.price_change_percentage_24h.toFixed(2)}}%)</span>
+      
+        <button class="btn btn-secondary btndata">Full data</button></td>
     </tr>
   </tbody>
 </table>
@@ -93,7 +96,8 @@ onMounted(() => {
     <tr v-for="exchange in exchangespop">
       <th scope="row"><img v-bind:src="exchange.image" style="width: 1.5rem"></th>
       <td>{{exchange.name}}</td>
-      <td>{{exchange.trade_volume_24h_btc.toFixed(2)}}</td>
+      <td>{{exchange.trade_volume_24h_btc.toFixed(2)}}
+        <button class="btn btn-secondary btndata">Full data</button></td>
     </tr>
   </tbody>
 </table>
@@ -136,7 +140,7 @@ onMounted(() => {
   </div>
 </div>
 
-    <p>or</p>
+    <p class="mt-2" style="font-family: Inter; font-weight:bolder">or</p>
     <button type="button" class="btn w-75 botoneshome">Register</button>
     <p>To acces the full data</p>
   </div>
@@ -197,6 +201,10 @@ table {
 .cardi {
 min-height: auto;
 width: 100%;
+}
+
+.btndata {
+  font-size: 0.5rem;
 }
 
 </style>
