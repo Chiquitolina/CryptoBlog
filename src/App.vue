@@ -33,9 +33,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </nav>
     </div>
   </header>
-  <body style="background-color: black; min-height: 89.25vh;">
   <RouterView />
-</body>
 </template>
 
 <style scoped>

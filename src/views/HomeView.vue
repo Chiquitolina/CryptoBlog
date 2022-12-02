@@ -2,6 +2,8 @@
 
 import { ref, onMounted } from 'vue';
 
+import Header from '../components/Header.vue';
+
 const coins = ref([])
 const exchanges = ref([])
 const nfts = ref([])
@@ -9,6 +11,20 @@ const nftspop = ref([])
 const exchangespop = ref([])
 const popularess = ref([])
 const coins24hs = ref([])
+const json = ref({})
+const jsonn = ref({})
+
+let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade')
+let wss = new WebSocket('wss://stream.binance.com:9443/ws/ethusdt@trade')
+
+ws.onmessage = (event) => {
+  json.value = JSON.parse(event.data)
+}
+
+wss.onmessage = (event) => {
+  jsonn.value = JSON.parse(event.data)
+}
+
 
 onMounted(() => {
 
@@ -41,6 +57,10 @@ onMounted(() => {
 
 <template style="background-color:black;">
 <div class="text-center position-absolute text-black w-100 text-center">
+  <div class="d-flex bg-dark text-white justify-content-around" style="font-family: Inter; border-radius: 0 0 2rem 2rem;">
+  <h6>BTC: {{json.p}}</h6>
+  <h6>ETH: {{jsonn.p}}</h6>
+</div>
   </div>
     <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 13.5rem;">
   <main class=" text-white text-center" style="background-color: black;">
@@ -77,7 +97,7 @@ onMounted(() => {
 <img src="../assets/trading.jpg" style=" width: 100%; border-radius: 30px;">
 <div class="text-center mt-3">
 <p style="font-weight: bold; font-size: 1.5rem; font-family: Inter;">CryptoBlog</p>
-<p style="font-family: Roboto; font-size: 2.2rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
+<p style="font-family: Roboto; font-size: 2.4rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
 </div>
 </div>
 <div class="w-100">
@@ -96,8 +116,8 @@ onMounted(() => {
     <tr v-for="exchange in exchangespop">
       <th scope="row"><img v-bind:src="exchange.image" style="width: 1.5rem"></th>
       <td>{{exchange.name}}</td>
-      <td>{{exchange.trade_volume_24h_btc.toFixed(2)}}
-        <button class="btn btn-secondary btndata">Full data</button></td>
+      <td class=""><span>{{exchange.trade_volume_24h_btc.toFixed(2)}}</span>
+        <button class="btn btn-secondary btndata w-75">Full data</button></td>
     </tr>
   </tbody>
 </table>
@@ -205,6 +225,7 @@ width: 100%;
 
 .btndata {
   font-size: 0.5rem;
+
 }
 
 </style>
