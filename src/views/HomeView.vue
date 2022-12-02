@@ -66,6 +66,7 @@ onMounted(() => {
     <div class="container d-flex flex-wrap">
       <div class="w-100">
       <h5 class="text-center mt-2 mb-0">Popular Cryptocurrencies:</h5>
+      <p>(Top #4 Ranked by MarketCap)</p>
     </div>
     <div class="table-responsive card cardi mt-3 col-12 col-md-4">
     <table class="table table-hover table-dark">
@@ -73,8 +74,6 @@ onMounted(() => {
     <tr>
       <th scope="col">Currency</th>
       <th scope="col">Price</th>
-      
-      
     </tr>
   </thead>
   <tbody>
@@ -84,7 +83,7 @@ onMounted(() => {
         {{coin.name}}</div>
       </td>
 
-      <td class="d-flex flex-column justify-content-center align-items-center h-100"><span>{{coin.current_price}}</span><span>({{coin.price_change_percentage_24h.toFixed(2)}}%)</span>
+      <td class=""><p>{{coin.current_price}}</p><p>({{coin.price_change_percentage_24h.toFixed(2)}}%)</p>
       
         <button class="btn btn-secondary btndata">Full data</button></td>
     </tr>
@@ -92,7 +91,7 @@ onMounted(() => {
 </table>
 </div>
 <div class="mt-3 w-100 d-flex justify-content-around align-items-center flex-wrap">
-<img src="../assets/trading.jpg" style=" width: 100%; border-radius: 30px;">
+<img src="../assets/trading.jpg" id="imghome">
 <div class="text-center mt-3">
 <p style="font-weight: bold; font-size: 1.5rem; font-family: Inter;">CryptoBlog</p>
 <p style="font-family: Roboto; font-size: 2.4rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
@@ -100,6 +99,7 @@ onMounted(() => {
 </div>
 <div class="w-100">
       <h5 class="text-center mt-2 mb-0">Popular Exchanges:</h5>
+      <p>(Top #4 Ranked by 24hs Trading Volume in BTC)</p>
     </div>
 <div class="table-responsive card cardi mt-3 col-12 col-md-4">
   <table class="table table-hover table-dark">
@@ -201,6 +201,12 @@ onMounted(() => {
   margin-top: 3rem;
 }
 
+#imghome {
+  width: 100%; 
+  border-radius: 30px;
+}
+
+
 
 
 input[type=password], .form-check {
@@ -237,6 +243,15 @@ width: 100%;
 .footer {
   position: sticky;
   bottom: 0;
+}
+
+
+@media screen and (min-device-width: 1200px)
+{
+  #imghome {
+  width: 100%; 
+  border-radius: 30px;
+}
 }
 
 </style>

@@ -2,8 +2,8 @@
 
 import {ref} from 'vue';
 
-const json = ref({})
-const jsonn = ref({})
+const json = ref({p: '---'})
+const jsonn = ref({p: '---'})
 
 let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade')
 let wss = new WebSocket('wss://stream.binance.com:9443/ws/ethusdt@trade')
