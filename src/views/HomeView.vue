@@ -3,6 +3,7 @@
 import { ref, onMounted } from 'vue';
 
 import Header from '../components/Header.vue';
+import FooterPrices from '../components/FooterPrices.vue';
 
 const coins = ref([])
 const exchanges = ref([])
@@ -57,10 +58,7 @@ onMounted(() => {
 
 <template style="background-color:black;">
 <div class="text-center position-absolute text-black w-100 text-center">
-  <div class="d-flex bg-dark text-white justify-content-around" style="font-family: Inter; border-radius: 0 0 2rem 2rem;">
-  <h6>BTC: {{json.p}}</h6>
-  <h6>ETH: {{jsonn.p}}</h6>
-</div>
+
   </div>
     <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 13.5rem;">
   <main class=" text-white text-center" style="background-color: black;">
@@ -166,10 +164,18 @@ onMounted(() => {
   </div>
   
   </main>
+
+  <FooterPrices class="footer" />
   
 </template>
 
 <style scoped>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 .botoneshome {
 
@@ -226,6 +232,11 @@ width: 100%;
 .btndata {
   font-size: 0.5rem;
 
+}
+
+.footer {
+  position: sticky;
+  bottom: 0;
 }
 
 </style>
