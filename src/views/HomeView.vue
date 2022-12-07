@@ -4,59 +4,14 @@ import { ref, onMounted } from 'vue';
 
 import Header from '../components/Header.vue';
 import FooterPrices from '../components/FooterPrices.vue';
-
-const coins = ref([])
-const exchanges = ref([])
-const nfts = ref([])
-const nftspop = ref([])
-const exchangespop = ref([])
-const popularess = ref([])
-const coins24hs = ref([])
-const json = ref({})
-const jsonn = ref({})
-
-let ws = new WebSocket('wss://stream.binance.com:9443/ws/btcusdt@trade')
-let wss = new WebSocket('wss://stream.binance.com:9443/ws/ethusdt@trade')
-
-ws.onmessage = (event) => {
-  json.value = JSON.parse(event.data)
-}
-
-wss.onmessage = (event) => {
-  jsonn.value = JSON.parse(event.data)
-}
-
-
-onMounted(() => {
-
-  fetch('https://api.coingecko.com/api/v3/nfts/list?order=h24_volume_native_asc')
-    .then(response => response.json())
-    .then(data => {
-      nfts.value = data
-      nftspop.value = nfts.value.slice(0, 4)
-      console.log(nftspop.value)
-    })
-
-  fetch('https://api.coingecko.com/api/v3/exchanges')
-    .then(response => response.json())
-    .then(data => {
-      exchanges.value = data
-      exchangespop.value = exchanges.value.sort((a, b) => b.trade_volume_24h_btc - a.trade_volume_24h_btc).slice(0, 4)
-    })
-  
-  fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&price_change_percentage=24hs')
-    .then(response => response.json())
-    .then(data => {
-      coins.value = data
-
-      popularess.value = coins.value.slice(0, 4)
-    })
-}
-)
+import Login from '../components/Login.vue'
+import PopEx from '../components/PopEx.vue'
+import PopCrypto from '../components/PopCrypto.vue'
 
 </script>
 
 <template style="background-color:black;">
+
 <div class="text-center position-absolute text-black w-100 text-center">
 
   </div>
@@ -64,32 +19,9 @@ onMounted(() => {
   <main class=" text-white text-center" style="background-color: black;">
     
     <div class="container d-flex flex-wrap">
-      <div class="w-100">
-      <h5 class="text-center mt-2 mb-0">Popular Cryptocurrencies:</h5>
-      <p>(Top #4 Ranked by MarketCap)</p>
-    </div>
-    <div class="table-responsive card cardi mt-3 col-12 col-md-4">
-    <table class="table table-hover table-dark">
-  <thead style="border-radius: 54px;">
-    <tr>
-      <th scope="col">Currency</th>
-      <th scope="col">Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="coin in popularess">
-      <td>
-        <div class="d-flex flex-column align-items-center"><img v-bind:src="coin.image" style="width: 1.7rem; display: block;">
-        {{coin.name}}</div>
-      </td>
-
-      <td class=""><p>{{coin.current_price}}</p><p>({{coin.price_change_percentage_24h.toFixed(2)}}%)</p>
       
-        <button class="btn btn-secondary btndata">Full data</button></td>
-    </tr>
-  </tbody>
-</table>
-</div>
+      <PopCrypto />
+
 <div class="mt-3 w-100 d-flex justify-content-around align-items-center flex-wrap">
 <img src="../assets/trading.jpg" id="imghome">
 <div class="text-center mt-3">
@@ -97,29 +29,8 @@ onMounted(() => {
 <p style="font-family: Roboto; font-size: 2.4rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
 </div>
 </div>
-<div class="w-100">
-      <h5 class="text-center mt-2 mb-0">Popular Exchanges:</h5>
-      <p>(Top #4 Ranked by 24hs Trading Volume in BTC)</p>
-    </div>
-<div class="table-responsive card cardi mt-3 col-12 col-md-4">
-  <table class="table table-hover table-dark">
-  <thead style="border-radius: 54px;">
-    <tr>
-      <th scope="col"></th>
-      <th scope="col">Name</th>
-      <th scope="col">24hs Trading Volume (BTC)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr v-for="exchange in exchangespop">
-      <th scope="row"><img v-bind:src="exchange.image" style="width: 1.5rem"></th>
-      <td>{{exchange.name}}</td>
-      <td class=""><span>{{exchange.trade_volume_24h_btc.toFixed(2)}}</span>
-        <button class="btn btn-secondary btndata w-75">Full data</button></td>
-    </tr>
-  </tbody>
-</table>
-</div>
+
+<PopEx />
 
 </div>
 <div class="mt-4">
@@ -128,34 +39,7 @@ onMounted(() => {
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="form-group">
-    <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
-  </div>
-  <div class="form-group">
-    <input type="password" class="form-control form-control-sm" id="exampleInputPassword1" placeholder="Email adress">
-  </div>
-  <div class="form-check text-black d-flex w-50 justify-content-between">
-  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-  <label class="form-check-label" for="flexCheckDefault">
-    Stay logged
-  </label>
-</div>
-<div class="form-group text-black text-start">
-  <p>Forgot your password? <a href="">Get help signin in.</a></p>
-</div>
-<button type="button" class="btn btngoog w-100">CONTINUE WITH GOOGLE</button>
-      </div>
-      <div class="modal-footer w-100 d-flex align-items-center justify-content-center">
-        <button type="button" class="btn btn-secondary">Submit</button>
-      </div>
-    </div>
-  </div>
+  <Login />
 </div>
 
     <p class="mt-2" style="font-family: Inter; font-weight:bolder">or</p>
@@ -164,8 +48,6 @@ onMounted(() => {
   </div>
   
   </main>
-
-  <FooterPrices class="footer" />
   
 </template>
 
@@ -189,6 +71,7 @@ onMounted(() => {
 }
 
 .titulo {
+  margin-top: 0.3;
   z-index: 12; 
   font-family: Roboto;
 }
@@ -238,11 +121,6 @@ width: 100%;
 .btndata {
   font-size: 0.5rem;
 
-}
-
-.footer {
-  position: sticky;
-  bottom: 0;
 }
 
 

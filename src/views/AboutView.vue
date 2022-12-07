@@ -1,4 +1,5 @@
 <template>
+  <main>
   <div class="text-center position-absolute text-black titulo w-100 text-white">
     <h2 class="text-black" style="font-family: Roboto; font-size: 3rem;">ABOUT US</h2>
     <h5>We are an information hub that provides all the analytics, information, and education you need to make informed investment decisions.</h5>
@@ -7,14 +8,22 @@
   <div class="text-white" style="background-color: black">
     
   </div>
+  </main>
 </template>
 
 <style>
 .titulo {
+  margin-top: 0.6rem;
   z-index: 12; 
 }
 
 h5 {
   font-weight: lighter;
+  width: 100%;
+}
+
+main {
+  min-height: 91vh;
+  background-color: black;
 }
 </style>

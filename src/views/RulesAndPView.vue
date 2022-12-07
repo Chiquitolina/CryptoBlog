@@ -1,4 +1,5 @@
 <template>
+  <main>
     <div class="text-center position-absolute text-black titulo w-100 text-white">
       <h2 class="text-black" style="font-family: Roboto; font-size: 3rem;">RULES AND POLICES</h2>
       <h1>NOT FINANCIAL ADVICE</h1>
@@ -7,6 +8,7 @@
     <div class="text-white" style="background-color: black">
       
     </div>
+    </main>
   </template>
   
   <style>
@@ -16,6 +18,11 @@
   
   h5 {
     font-weight: lighter;
+  }
+
+  main {
+    min-height: 91vh;
+    background-color: black;
   }
   </style>
   

@@ -1,7 +1,16 @@
 <script setup>
 
+import Menu from '../components/Menu.vue'
+
 import { RouterLink, RouterView } from 'vue-router'
 
+import { logout } from '../firebase/auth.js'
+
+import user from '../store/profile.js'
+
+function con() {
+  console.log(user.value)
+}
 
 </script>
 
@@ -12,22 +21,18 @@ import { RouterLink, RouterView } from 'vue-router'
     <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#"><h5 class="text-end">CryptoBlog</h5></a>
+    <div class="d-flex">
+    <img class="photouser" :src="user? user.photoURL : null"/>
+    <a class="navbar-brand" href="#"><h5 class="text-center" @click="con">CryptoBlog</h5></a>
+  </div>
   </div>
 </nav>
-<div class="cla offcanvas offcanvas-top h-50 w-50 text-white bg-dark w-100" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-  <div class="offcanvas-header">
-    <a class="navbar-brand" href="#"><h5 class="text-end">CryptoBlog</h5></a>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body text-center">
-     <div data-bs-dismiss="offcanvas"><RouterLink to="/">Home</RouterLink></div>
-        <div class="la" data-bs-dismiss="offcanvas"><RouterLink to="/about">About</RouterLink></div>
-        <div class="la" data-bs-dismiss="offcanvas"><RouterLink to="/contact">Contact</RouterLink></div>
-        <div class="la" data-bs-dismiss="offcanvas"><RouterLink to="/work">Work with us</RouterLink></div>
-        <div class="la" data-bs-dismiss="offcanvas"><RouterLink to="/contact">Favs</RouterLink></div>
-        <div class="la" data-bs-dismiss="offcanvas"><RouterLink to="/rules">Rules & Polices</RouterLink></div>
-  </div>
+<div class="cla offcanvas offcanvas-top w-50 text-white bg-dark w-100" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
+
+
+<Menu />
+
+
 </div>
 </template>
 
@@ -42,8 +47,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
  .cla {
   border-radius: 0 0 34px 0;
+  min-height: 60%;
  }
-
+ 
  .la {
   margin-top: 1rem;
  }
@@ -53,6 +59,11 @@ import { RouterLink, RouterView } from 'vue-router'
     font-size: 1.5rem;
     font-family: Inter;
     font-weight: Bold;
+ }
+
+ .photouser {
+  width: 3rem;
+  border-radius: 8rem;
  }
 
 </style>
