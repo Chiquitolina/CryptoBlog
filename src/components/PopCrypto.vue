@@ -42,11 +42,13 @@ onMounted(() => {
 
       <td class=""><p>{{coin.current_price}}</p><p>({{coin.price_change_percentage_24h.toFixed(2)}}%)</p>
       
-        <button class="btn btn-secondary btndata">Full data</button></td>
+        <button type="button" class="btn btn-secondary btndata" data-toggle="modal" data-target="#exampleModali">Full data</button></td>
+        
     </tr>
   </tbody>
 </table>
 </div>
+
 
 </template>
 

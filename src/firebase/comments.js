@@ -1,5 +1,5 @@
 import {app } from '../firebase/index.js'
-import {getFirestore, addDoc, collection, onSnapshot} from 'firebase/firestore'
+import {getFirestore, addDoc, collection, onSnapshot, deleteDoc, doc} from 'firebase/firestore'
 import { async } from '@firebase/util'
 import comments from '../store/comments.js'
 
@@ -9,6 +9,10 @@ const commentsRef = collection(db, 'comments')
 
 const addComment = async (comment) => {
     addDoc(commentsRef, comment);
+}
+
+const deleteComment = (id) => {
+    deleteDoc(doc(commentsRef, id))
 }
 
 onSnapshot(commentsRef, (snapshot) => {
@@ -24,4 +28,4 @@ onSnapshot(commentsRef, (snapshot) => {
     })
 })
 
-export {addComment}
+export {addComment, deleteComment}
