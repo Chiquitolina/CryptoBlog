@@ -14,13 +14,14 @@ import { loginWithGoogle } from '../firebase/auth.js'
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+        
         <div class="form-group">
           <input type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp"
-            placeholder="Name">
+            placeholder="Name" disabled>
         </div>
         <div class="form-group">
           <input type="password" class="form-control form-control-sm" id="exampleInputPassword1"
-            placeholder="Email adress">
+            placeholder="Email adress" disabled>
         </div>
         <div class="form-check text-black d-flex w-50">
           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -31,10 +32,7 @@ import { loginWithGoogle } from '../firebase/auth.js'
         <div class="form-group text-black text-start">
           <p>Forgot your password? <a href="">Get help signin in.</a></p>
         </div>
-        <button type="button" class="btn btngoog w-100" >CONTINUE WITH GOOGLE <i class="bi bi-google"></i></button>
-      </div>
-      <div class="modal-footer w-100 d-flex align-items-center justify-content-center">
-        <button type="button" class="btn btn-secondary" @click="loginWithGoogle">Submit</button>
+        <button type="button" class="btn btngoog w-100" @click="loginWithGoogle">CONTINUE WITH GOOGLE <i class="bi bi-google"></i></button>
       </div>
     </div>
   </div>

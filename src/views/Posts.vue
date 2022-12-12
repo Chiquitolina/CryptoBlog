@@ -2,6 +2,10 @@
 
 import { ref } from 'vue';
 import { addComment, deleteComment } from '../firebase/comments.js'
+import user from '../store/profile.js'
+
+import NewPost from '../components/NewPost.vue'
+import PostItem from '../components/PostItem.vue'
 
 import comments from '../store/comments.js'
 
@@ -41,48 +45,29 @@ const addNewComment = () => {
     </div>
     <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 13.5rem;">
 
+
     <div class="cardContainer w-100 d-flex flex-column align-items-center">
 
-      <div class="card mt-2 w-75" v-for="comment in comments">
+      <!-- Button trigger modal -->
 
-      <div class="bg-dark rounded text-white text-center"><h6>Author: {{ comment.name }}</h6></div>
-
-        
-
-        <div class="">
-
-          <p class="rounded w-75" style="background-color: grey;">{{ comment.message }}</p>
-
-          <p>{{ comment.email }}</p>
-
-
-        </div>
-
-
-        <button class="btn btn-danger d-flex align-items-center justify-content-center" @click="deleteComment(comment.id)"><i class="bi bi-trash"></i></button>
-
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <NewPost />
       </div>
 
+
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-dark btnsearch rounded" type="submit" disabled><i class="bi bi-search"></i></button>
+
+      </form>
+      <button v-if="user" class="btn btn-secondary newpostbtn mt-1 rounded" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">New Post</button>
+
+      <PostItem v-for="post in comments" :post="post"/>
+      
     </div>
 
-    <form>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input v-model="name" type="text" class="form-control" id="name" aria-describedby="emailHelp"
-          placeholder="Enter email">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input v-model="email" type="email" class="form-control" id="email" aria-describedby="emailHelp"
-          placeholder="Enter email">
-      </div>
-      <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <textarea v-model="message" class="form-control" id="message" aria-describedby="emailHelp"
-          placeholder="Enter email" @keyup.enter="addNewComment"></textarea>
-      </div>
-      <button @click.prevent="addNewComment">dasdadasdasdasdsaa</button>
-    </form>
 
   </main>
 
@@ -91,6 +76,21 @@ const addNewComment = () => {
 
 
 <style scoped>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.modal {
+  margin-top: 3rem;
+}
+
+.newpostbtn {
+  width: 5rem;
+  border-radius: 6px 6px 0 0;
+}
+
 main {
   width: 100%;
   background-color: black;
@@ -107,6 +107,30 @@ main {
 button {
   width: 2rem;
   height: 2rem;
+  border-radius: 0 0 6px 6px;
 
+}
+
+.mensaje {
+  min-height: 5rem;
+  border-radius: 0 0 6px 6px;
+}
+
+.author {
+  border-radius: 6px 6px 0 0;
+}
+
+.btnsearch {
+  width: 5rem;
+}
+
+.titpost {
+  border-radius: 0 0 6px 6px;
+  margin-top: 0.1rem;
+}
+
+.fecha {
+  font-size: 0.7rem;
+  border-radius: 0 0 6px 6px;
 }
 </style>

@@ -46,7 +46,7 @@ import PopCrypto from '../components/PopCrypto.vue'
 </div>
 
     <p class="mt-2" style="font-family: Inter; font-weight:bolder">or</p>
-    <button type="button" class="btn w-75 botoneshome">Register</button>
+    <button type="button" class="btn w-75 botoneshome" disabled>Register</button>
     <p>To acces the full data</p>
   </div>
   

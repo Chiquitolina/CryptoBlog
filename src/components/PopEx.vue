@@ -2,6 +2,8 @@
 
 import { ref, onMounted } from 'vue';
 
+import FullData from '../components/FullData.vue';
+
 const exchanges = ref([])
 const exchangespop = ref([])
 
@@ -40,11 +42,19 @@ fetch('https://api.coingecko.com/api/v3/exchanges')
       <th scope="row"><img v-bind:src="exchange.image" style="width: 1.5rem"></th>
       <td>{{exchange.name}}</td>
       <td class=""><span>{{exchange.trade_volume_24h_btc.toFixed(2)}}</span>
-        <button class="btn btn-secondary btndata w-75">Full data</button></td>
+        <button type="button" class="btn btn-secondary btndata" data-bs-toggle="modal"
+              data-bs-target="#exampleModalu">
+              Full Data
+            </button></td>
     </tr>
   </tbody>
 </table>
 </div>
+
+ <!-- Modal -->
+ <div class="modal fade" id="exampleModalu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <FullData />
+  </div>
     
 </template>
 

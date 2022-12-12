@@ -18,7 +18,7 @@ function con() {
   <nav class="navbar navbar-expand-lg" style="background-color: black;">
     <div class="container-fluid">
 
-      <button type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
+      <button class="rounded" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="d-flex">
@@ -29,7 +29,7 @@ function con() {
       </div>
     </div>
   </nav>
-  <div class="cla offcanvas offcanvas-top w-50 text-white bg-dark w-100" tabindex="-1" id="offcanvasTop"
+  <div class="cla offcanvas offcanvas-top text-white bg-dark w-100" tabindex="-1" id="offcanvasTop"
     aria-labelledby="offcanvasTopLabel">
 
 
@@ -40,6 +40,12 @@ function con() {
 </template>
 
 <style scoped>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .nav {
   background-color: black;
   box-shadow: 0px 14px 28px -19px rgba(0, 0, 0, 0.75);

@@ -22,7 +22,9 @@ onSnapshot(commentsRef, (snapshot) => {
             id: doc.id,
             name: doc.data().name,
             email: doc.data().email,
-            message: doc.data().message
+            message: doc.data().message,
+            fecha: doc.data().fecha,
+            titulo: doc.data().titulo
         }
         comments.value.push(comment)
     })
