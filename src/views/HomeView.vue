@@ -2,6 +2,9 @@
 
 import { ref, onMounted } from 'vue';
 
+import { addComment } from '../firebase/comments.js'
+
+
 import Header from '../components/Header.vue';
 import FooterPrices from '../components/FooterPrices.vue';
 import Login from '../components/Login.vue'
