@@ -34,6 +34,9 @@ import { loginWithGoogle } from '../firebase/auth.js'
         </div>
         <button type="button" class="btn btngoog w-100" @click="loginWithGoogle">CONTINUE WITH GOOGLE <i class="bi bi-google"></i></button>
       </div>
+      <div class="modal-footer w-100 d-flex align-items-center justify-content-center">
+        <button type="button" data-bs-dismiss="modal" class="btn btn-secondary" @click="loginWithGoogle">Submit</button>
+      </div>
     </div>
   </div>
 
