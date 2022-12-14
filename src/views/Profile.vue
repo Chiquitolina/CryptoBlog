@@ -20,13 +20,16 @@ import user from '../store/profile.js'
     <img class="imgperfil" :src="user? user.photoURL : 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'" alt="">    
 
     <div>
-        <p class="text-center">User ID:</p>
+        <h5 class="text-center">{{user.displayName}}</h5>
     </div>
 
   </div>
 
-<div>
+<div class="text-black d-flex w-100">
+  <div class="w-50 bg-white rounded"><h3>Posts:</h3></div>
+  <div class="w-50 bg-white rounded"><h3>Comments:</h3></div>
 </div>
+
 
 
 

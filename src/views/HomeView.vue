@@ -2,7 +2,7 @@
 
 import { ref, onMounted } from 'vue';
 
-import { addComment } from '../firebase/comments.js'
+import { addComment } from '../firebase/posts.js'
 
 
 import Header from '../components/Header.vue';
@@ -15,8 +15,8 @@ import PopCrypto from '../components/PopCrypto.vue'
 
 <template style="background-color:black;">
 
-<div class="text-center position-absolute text-black w-100 text-center">
-
+<div class="text-center tit text-black w-100 text-center text-white">
+<h1>THE CRYPTO BLOG</h1>
   </div>
     <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 13.5rem;">
   <main class=" text-white text-center" style="background-color: black;">
@@ -90,6 +90,13 @@ import PopCrypto from '../components/PopCrypto.vue'
 #imghome {
   width: 100%; 
   border-radius: 30px;
+}
+
+.tit {
+  position: absolute;
+  top: 8rem;
+  font-family: Inter;
+  font-size: 9rem;
 }
 
 

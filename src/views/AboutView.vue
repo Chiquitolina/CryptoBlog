@@ -8,6 +8,7 @@
   <div class="text-white" style="background-color: black">
     
   </div>
+
   </main>
 </template>
 
@@ -18,8 +19,9 @@
 }
 
 h4 {
-  font-weight: lighter;
+  font-weight:600;
   width: 100%;
+  font-size: 1.5rem;
 }
 
 main {

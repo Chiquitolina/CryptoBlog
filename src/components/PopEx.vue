@@ -1,5 +1,7 @@
 <script setup>
 
+import user from '../store/profile.js'
+
 import { ref, onMounted } from 'vue';
 
 import FullData from '../components/FullData.vue';
@@ -42,7 +44,7 @@ fetch('https://api.coingecko.com/api/v3/exchanges')
       <th scope="row"><img v-bind:src="exchange.image" style="width: 1.5rem"></th>
       <td>{{exchange.name}}</td>
       <td class=""><span>{{exchange.trade_volume_24h_btc.toFixed(2)}}</span>
-        <button type="button" class="btn btn-secondary btndata" data-bs-toggle="modal"
+        <button v-if="user" type="button" class="btn btn-secondary btndata" data-bs-toggle="modal"
               data-bs-target="#exampleModalu">
               Full Data
             </button></td>

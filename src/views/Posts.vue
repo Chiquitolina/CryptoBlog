@@ -1,13 +1,13 @@
 <script setup>
 
 import { ref } from 'vue';
-import { addComment, deleteComment } from '../firebase/comments.js'
+import { addComment, deleteComment } from '../firebase/posts.js'
 import user from '../store/profile.js'
 
 import NewPost from '../components/NewPost.vue'
 import PostItem from '../components/PostItem.vue'
 
-import comments from '../store/comments.js'
+import  { posts } from '../store/comments.js'
 
 const name = ref('')
 const email = ref('')
@@ -64,8 +64,8 @@ const addNewComment = () => {
       <button v-if="user" class="btn btn-secondary newpostbtn mt-1 rounded" data-bs-toggle="modal"
         data-bs-target="#exampleModal">New Post</button>
 
-      <PostItem v-for="post in comments" :post="post"/>
-      
+      <PostItem v-for="post in posts" :post="post" />
+
     </div>
 
 

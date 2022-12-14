@@ -19,7 +19,7 @@ import { logout } from '../firebase/auth.js'
         <div class="la" data-bs-dismiss="offcanvas"><i class="bi bi-briefcase"></i><RouterLink to="/work">Work with us</RouterLink></div>
         <div class="la" data-bs-dismiss="offcanvas"><i class="bi bi-book"></i><RouterLink to="/rules">Rules & Polices</RouterLink></div>
         <div class="la" data-bs-dismiss="offcanvas"><i class="bi bi-grid-1x2-fill"></i><RouterLink to="/posts">Posts</RouterLink></div>
-        <div v-if="user" class="la" data-bs-dismiss="offcanvas" @click="logout"><i class="bi bi-grid-1x2-fill"></i><RouterLink to="/posts">Log Out</RouterLink></div>
+        <div v-if="user" class="la" data-bs-dismiss="offcanvas" @click="logout"><i class="bi bi-grid-1x2-fill"></i><RouterLink to="/">Log Out</RouterLink></div>
         </div>
         <div>
          <div v-if="user" class="la mt-0" data-bs-dismiss="offcanvas"><i class="bi bi-person-bounding-box ml-3"></i><RouterLink to="/profile">Profile</RouterLink></div>

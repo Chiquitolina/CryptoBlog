@@ -1,5 +1,7 @@
 <script setup>
 
+import user from '../store/profile.js'
+
 import { ref, onMounted } from 'vue';
 
 import FullData from '../components/FullData.vue'
@@ -47,7 +49,7 @@ onMounted(() => {
             <p>{{ coin.current_price }}</p>
             <p>({{ coin.price_change_percentage_24h.toFixed(2) }}%)</p>
 
-            <button type="button" class="btn btn-secondary btndata" data-bs-toggle="modal"
+            <button v-if="user" type="button" class="btn btn-secondary btndata" data-bs-toggle="modal"
               data-bs-target="#exampleModalu">
               Full Data
             </button>

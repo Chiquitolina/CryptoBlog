@@ -2,7 +2,7 @@
 
 import {ref} from 'vue'
 
-import { addComment } from '../firebase/comments.js'
+import { addComment } from '../firebase/posts.js'
 
 import { loginWithGoogle } from '../firebase/auth.js'
 
@@ -25,7 +25,7 @@ const addNewComment = () => {
     titulo: titulo.value,
     name: user.value.displayName,
     message: message.value,
-    fecha: calcularFecha()
+    fecha: Date.now()
   }
   console.log(newComent);
   addComment(newComent)

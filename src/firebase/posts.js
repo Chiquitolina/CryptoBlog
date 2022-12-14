@@ -1,24 +1,24 @@
-import {app } from '../firebase/index.js'
+import {app } from './index.js'
 import {getFirestore, addDoc, collection, onSnapshot, deleteDoc, doc} from 'firebase/firestore'
 import { async } from '@firebase/util'
-import comments from '../store/comments.js'
+import { posts } from '../store/comments.js'
 
 const db = getFirestore(app)
 
-const commentsRef = collection(db, 'comments')
+const postsRef = collection(db, 'comments')
 
-const addComment = async (comment) => {
-    addDoc(commentsRef, comment);
+const addComment = async (post) => {
+    addDoc(postsRef, post);
 }
 
 const deleteComment = (id) => {
-    deleteDoc(doc(commentsRef, id))
+    deleteDoc(doc(postsRef, id))
 }
 
-onSnapshot(commentsRef, (snapshot) => {
-    comments.value = []
+onSnapshot(postsRef, (snapshot) => {
+    posts.value = []
     snapshot.forEach(doc => {
-        const comment = {
+        const post = {
             id: doc.id,
             name: doc.data().name,
             email: doc.data().email,
@@ -26,7 +26,8 @@ onSnapshot(commentsRef, (snapshot) => {
             fecha: doc.data().fecha,
             titulo: doc.data().titulo
         }
-        comments.value.push(comment)
+        posts.value.push(post)
+        posts.value.sort((a,b)=> b.fecha - a.fecha)
     })
 })
 

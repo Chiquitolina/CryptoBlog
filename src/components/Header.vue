@@ -70,7 +70,8 @@ h5 {
 }
 
 .photouser {
-  width: 3rem;
+  width: 2.5rem;
   border-radius: 8rem;
+  margin-right: 1rem;
 }
 </style>
