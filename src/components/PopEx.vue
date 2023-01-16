@@ -26,8 +26,10 @@ fetch('https://api.coingecko.com/api/v3/exchanges')
 
 <template>
 
+<div class="contex d-flex flex-column justify-content-end mt-3">
+
 <div class="w-100">
-      <h5 class="text-center mt-2 mb-0">Popular Exchanges:</h5>
+      <h4 class="text-center mt-2 mb-0">Popular Exchanges:</h4>
       <p>(Top #4 Ranked by 24hs Trading Volume in BTC)</p>
     </div>
 <div class="table-responsive card cardi mt-3 col-12 col-md-4">
@@ -52,7 +54,7 @@ fetch('https://api.coingecko.com/api/v3/exchanges')
   </tbody>
 </table>
 </div>
-
+</div>
  <!-- Modal -->
  <div class="modal fade" id="exampleModalu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <FullData />
@@ -80,6 +82,10 @@ table {
 
 }
 
+.contex {
+  width: 100%;
+}
+
 button {
   border-radius: 55px;
 }
@@ -87,6 +93,12 @@ button {
 .cardi {
 min-height: auto;
 width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .table-responsive {
+    width: 100%;
+  }
 }
 
 </style>

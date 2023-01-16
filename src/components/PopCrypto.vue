@@ -25,12 +25,14 @@ onMounted(() => {
 
 <template>
 
+<div class="flex flex-column tab ">
+
   <div class="w-100">
-    <h5 class="text-center mt-2 mb-0">Popular Cryptocurrencies:</h5>
+    <h4 class="text-center mt-2 mb-0">Popular Cryptocurrencies:</h4>
     <p>(Top #4 Ranked by MarketCap)</p>
   </div>
   <div class="table-responsive card cardi mt-3 col-12 col-md-4">
-    <table class="table table-hover table-dark">
+    <table class="table table-hover table-dark w-100">
       <thead style="border-radius: 54px;">
         <tr>
           <th scope="col">Currency</th>
@@ -58,7 +60,7 @@ onMounted(() => {
       </tbody>
     </table>
   </div>
-
+</div>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModalu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -82,6 +84,10 @@ table {
   height: 18rem
 }
 
+.tab {
+  width: 50%;
+}
+
 .btndata {
   font-size: 0.6rem;
 
@@ -99,4 +105,13 @@ button {
 .modal {
   margin-top: 3rem;
 }
+
+@media (min-width: 1200px) {
+  .table-responsive {
+    width: 100%;
+  }
+
+  
+}
+
 </style>

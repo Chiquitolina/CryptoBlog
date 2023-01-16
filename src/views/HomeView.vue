@@ -22,22 +22,34 @@ import PopCrypto from '../components/PopCrypto.vue'
   <main class=" text-white text-center" style="background-color: black;">
     
     <div class="container d-flex flex-wrap">
+
+      <div class="w-100 d-flex">
       
       <PopCrypto />
 
-<div class="mt-3 w-100 d-flex justify-content-around align-items-center flex-wrap">
-<img src="../assets/trading.jpg" id="imghome">
-<div class="text-center mt-3">
-<p style="font-weight: bold; font-size: 1.5rem; font-family: Inter;">CryptoBlog</p>
-<p style="font-family: Roboto; font-size: 2.4rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
+      <div class=" d-flex flex-column align-items-center justify-content-center">
+      
+        <h1 class="w-50 signuptext">Sign up now to access all the available data</h1>
+
+        <button class="btn botoneshome mt-3">Get started!</button>
+
+      </div>
+
+    </div>
+
+<div class="mt-5 w-100 d-flex justify-content-around align-items-center flex-wrap" v-motion-slide-visible-once-left :delay="600">
+<div class="text-center mt-3 asd" v-motion-slide-visible-once-right>
+<p style="font-weight: bold; font-size: 2rem; font-family: Inter;">CryptoBlog</p>
+<p style="font-family: Roboto; font-size: 2.5rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
 </div>
+<img  src="../assets/trading.jpg" id="imghome">
 </div>
 
 <PopEx />
 
 </div>
 <div class="mt-4">
-    <button type="button" class="btn w-75 botoneshome" data-bs-toggle="modal" data-bs-target="#exampleModal">Log in</button>
+    <button type="button" class="btn botoneshome" data-bs-toggle="modal" data-bs-target="#exampleModal">Log in</button>
     <!-- Button trigger modal -->
 
 <!-- Modal -->
@@ -46,7 +58,7 @@ import PopCrypto from '../components/PopCrypto.vue'
 </div>
 
     <p class="mt-2" style="font-family: Inter; font-weight:bolder">or</p>
-    <button type="button" class="btn w-75 botoneshome" disabled>Register</button>
+    <button type="button" class="btn botoneshome" disabled>Register</button>
     <p>To acces the full data</p>
   </div>
   
@@ -62,8 +74,10 @@ import PopCrypto from '../components/PopCrypto.vue'
     box-sizing: border-box;
 }
 
+
 .botoneshome {
 
+  width: 50%;
   border-radius: 55px;
   background-color: #FF7A00;
   color: black;
@@ -88,8 +102,9 @@ import PopCrypto from '../components/PopCrypto.vue'
 }
 
 #imghome {
-  width: 100%; 
+  width: 85%; 
   border-radius: 30px;
+  
 }
 
 .tit {
@@ -98,9 +113,6 @@ import PopCrypto from '../components/PopCrypto.vue'
   font-family: Inter;
   font-size: 9rem;
 }
-
-
-
 
 input[type=password], .form-check {
   margin-top: 1rem;
@@ -133,13 +145,23 @@ width: 100%;
 
 }
 
-
-@media screen and (min-device-width: 1200px)
-{
-  #imghome {
-  width: 100%; 
-  border-radius: 30px;
+.signuptext {
+  font-size: 2rem;
 }
+
+
+@media (min-width: 1200px) {
+  #imghome {
+    width: 50%;
+  }
+
+  .botoneshome {
+    width: 25%;
+  }
+
+  .asd {
+    width: 25%;
+  }
 }
 
 </style>
