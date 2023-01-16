@@ -23,11 +23,11 @@ import PopCrypto from '../components/PopCrypto.vue'
     
     <div class="container d-flex flex-wrap">
 
-      <div class="w-100 d-flex">
+      <div class="w-100 d-flex justify-content-around mt-3">
       
       <PopCrypto />
 
-      <div class=" d-flex flex-column align-items-center justify-content-center">
+      <div class=" d-flex flex-column align-items-center justify-content-center border singuptextcont" style="border-radius: 5rem;">
       
         <h1 class="w-50 signuptext">Sign up now to access all the available data</h1>
 
@@ -73,6 +73,11 @@ import PopCrypto from '../components/PopCrypto.vue'
     padding: 0;
     box-sizing: border-box;
 }
+
+.singuptextcont {
+  width: 35%;
+}
+
 
 
 .botoneshome {
@@ -152,7 +157,7 @@ width: 100%;
 
 @media (min-width: 1200px) {
   #imghome {
-    width: 50%;
+    width: 55%;
   }
 
   .botoneshome {
@@ -162,6 +167,13 @@ width: 100%;
   .asd {
     width: 25%;
   }
+}
+
+@media (max-width: 768px) {
+   .signuptext {
+    font-size: 1.3rem;
+   }
+
 }
 
 </style>
