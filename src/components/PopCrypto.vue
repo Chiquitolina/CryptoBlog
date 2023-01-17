@@ -27,8 +27,12 @@ onMounted(() => {
 
 <div class="flex flex-column tab ">
 
-  <div class="w-100">
-    <h4 class="text-center mt-2 mb-0">Popular Cryptocurrencies:</h4>
+  <div class="w-100 text-start">
+    <div class="d-flex w-100 justify-content-between">
+      <h4 class=" mt-2 mb-0">Popular Cryptocurrencies:</h4>
+      <p class=" mt-2 mb-0">View more markets <i class="bi bi-box-arrow-up-right"></i>
+</p>
+  </div>
     <p>(Top #4 Ranked by MarketCap)</p>
   </div>
   <div class="table-responsive card cardi mt-3 col-12 col-md-4">
@@ -81,7 +85,7 @@ table {
   font-family: Inter;
   font-size: 0.85rem;
   margin-bottom: 0;
-  height: 18rem
+  height: 18rem;
 }
 
 .tab {

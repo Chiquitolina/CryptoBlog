@@ -20,9 +20,9 @@ wss.onmessage = (event) => {
 
 <template>
 
-<div class="d-flex text-white justify-content-around" style="font-family: Inter; background-color: black;">
-<h6 style="font-size: 0.9rem">BTC: {{json.p}} USDT</h6>
-<h6 style="font-size: 0.9rem">ETH: {{jsonn.p}} USDT</h6>
+<div class="d-flex text-white justify-content-around text-center align-items-center" style=";font-family: Inter; background-color: #1B1E21; ">
+<div class="bg-white text-black rounded" style="height: 3rem;"><h6 style="font-size: 0.9rem">BTC: {{json.p}}</h6><h6>USDT</h6></div>
+<div class="bg-white text-black rounded" style="height: 3rem;"><h6 style="font-size: 0.9rem">BTC: {{json.p}}</h6><h6>USDT</h6></div>
 </div>
 
 </template>

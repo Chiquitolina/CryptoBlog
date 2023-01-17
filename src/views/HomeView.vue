@@ -15,37 +15,39 @@ import PopCrypto from '../components/PopCrypto.vue'
 
 <template style="background-color:black;">
 
-<div class="text-center tit text-black w-100 text-center text-white">
-<h1>THE CRYPTO BLOG</h1>
+<div class="text-center tit text-black w-100 text-center text-white"  v-motion-fade :delay="300">
+<h1 style="font-family: Inter; font-weight: bolder;">TheCryptoBlog</h1>
   </div>
-    <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 13.5rem;">
+    <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 9.5rem;">
   <main class=" text-white text-center" style="background-color: black;">
     
     <div class="container d-flex flex-wrap">
 
-      <div class="w-100 d-flex justify-content-around mt-3">
+      <div class="w-100 d-flex justify-content-around mt-3 aaa" v-motion-fade :delay="600">
       
       <PopCrypto />
 
-      <div class=" d-flex flex-column align-items-center justify-content-center border singuptextcont" style="border-radius: 5rem;">
+      <div class=" d-flex flex-column align-items-center justify-content-center singuptextcont bg-dark" style="border-radius: 5rem;">
       
         <h1 class="w-50 signuptext">Sign up now to access all the available data</h1>
 
-        <button class="btn botoneshome mt-3">Get started!</button>
+        <button button type="button" class="btn botoneshome mt-3 w-75" data-bs-toggle="modal" data-bs-target="#exampleModal">Get started!</button>
 
       </div>
 
     </div>
 
-<div class="mt-5 w-100 d-flex justify-content-around align-items-center flex-wrap" v-motion-slide-visible-once-left :delay="600">
-<div class="text-center mt-3 asd" v-motion-slide-visible-once-right>
+<div class="mt-5 w-100 d-flex justify-content-around align-items-center flex-wrap">
+<div class="text-center mt-3 asd " v-motion-slide-visible-once-left :delay="600">
 <p style="font-weight: bold; font-size: 2rem; font-family: Inter;">CryptoBlog</p>
 <p style="font-family: Roboto; font-size: 2.5rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
 </div>
-<img  src="../assets/trading.jpg" id="imghome">
+<img  src="../assets/trading.jpg" id="imghome" v-motion-slide-visible-once-right :delay="600">
 </div>
 
+<div class="w-100" v-motion-fade-visible-once :delay="600"> 
 <PopEx />
+</div>
 
 </div>
 <div class="mt-4">
@@ -114,9 +116,9 @@ import PopCrypto from '../components/PopCrypto.vue'
 
 .tit {
   position: absolute;
-  top: 8rem;
+  top: 6rem;
   font-family: Inter;
-  font-size: 9rem;
+  font-size: 1rem;
 }
 
 input[type=password], .form-check {
@@ -165,14 +167,27 @@ width: 100%;
   }
 
   .asd {
-    width: 25%;
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5rem;
+    background-color: #1B1E21;
   }
 }
 
 @media (max-width: 768px) {
    .signuptext {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
    }
+
+   .aaa {
+    display: flex;
+    flex-wrap: wrap;
+   }
+
+   
 
 }
 

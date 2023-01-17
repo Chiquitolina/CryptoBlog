@@ -9,6 +9,7 @@
         <div class="modal-content">
             <div class="modal-header text-black">
                 <h3>Full Data</h3>
+                dsadadsadsadsadsadsadas
             </div>
             <div class="modal-body">
                 <table class="table table-hover table-dark">

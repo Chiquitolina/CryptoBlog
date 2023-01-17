@@ -26,10 +26,14 @@ fetch('https://api.coingecko.com/api/v3/exchanges')
 
 <template>
 
-<div class="contex d-flex flex-column justify-content-end mt-3">
+<div class="contex d-flex flex-column justify-content-end mt-5">
 
-<div class="w-100">
-      <h4 class="text-center mt-2 mb-0">Popular Exchanges:</h4>
+<div class="w-100 text-start">
+  <div class="d-flex w-100 justify-content-between">
+      <h4 class=" mt-2 mb-0">Popular Exchanges:</h4>
+      <p class=" mt-2 mb-0">View more exchanges <i class="bi bi-box-arrow-up-right"></i>
+</p>
+  </div>
       <p>(Top #4 Ranked by 24hs Trading Volume in BTC)</p>
     </div>
 <div class="table-responsive card cardi mt-3 col-12 col-md-4">
@@ -44,12 +48,16 @@ fetch('https://api.coingecko.com/api/v3/exchanges')
   <tbody>
     <tr v-for="exchange in exchangespop">
       <th scope="row"><img v-bind:src="exchange.image" style="width: 1.5rem"></th>
+      
       <td>{{exchange.name}}</td>
-      <td class=""><span>{{exchange.trade_volume_24h_btc.toFixed(2)}}</span>
+      <td class="">
+        <div class="d-flex flex-column">
+        <span>{{exchange.trade_volume_24h_btc.toFixed(2)}}</span>
         <button v-if="user" type="button" class="btn btn-secondary btndata" data-bs-toggle="modal"
               data-bs-target="#exampleModalu">
               Full Data
-            </button></td>
+            </button>
+          </div></td>
     </tr>
   </tbody>
 </table>
