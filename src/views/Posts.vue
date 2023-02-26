@@ -64,7 +64,11 @@ const addNewComment = () => {
       <button v-if="user" class="btn btn-secondary newpostbtn mt-1 rounded" data-bs-toggle="modal"
         data-bs-target="#exampleModal">New Post</button>
 
+      <div class="w-75 d-flex flex-wrap justify-content-around mt-3">
+
       <PostItem v-for="post in posts" :post="post" />
+
+    </div>
 
     </div>
 

@@ -24,9 +24,9 @@ const tranFecha = (fecha) => {
 
 <template>
 
-<div class="card mt-2 w-75">
+<div class="card mt-2 con">
 
-<div class="bg-dark author text-white text-center"><span>Author: {{ post.name }}</span></div>
+<div class="bg-dark author text-white text-center"><span style="font-weight: bold;">{{ post.name }}</span></div>
 
 <div class="bg-dark text-white text-center titpost"><span>{{ post.titulo }}</span></div>
 
@@ -34,7 +34,7 @@ const tranFecha = (fecha) => {
 
 <div class="">
 
-  <p class="w-100 mensaje text-center rounded bg-white" style="background-color: grey;">
+  <p class="w-100 mensaje text-center bg-dark" style="background-color: grey;">
     {{ post.message }}
   </p>
 </div>
@@ -66,7 +66,6 @@ const tranFecha = (fecha) => {
 
 .mensaje {
   min-height: 5rem;
-  border-radius: 0 0 6px 6px;
 }
 
 .author {
@@ -78,7 +77,6 @@ const tranFecha = (fecha) => {
 }
 
 .titpost {
-  border-radius: 0 0 6px 6px;
   margin-top: 0.1rem;
 }
 
@@ -92,6 +90,11 @@ button {
   height: 2rem;
   border-radius: 0 0 6px 6px;
 
+}
+
+.cont {
+  width: 35%;
+  border-radius: 5rem;
 }
 
 
