@@ -8,6 +8,8 @@ import NewComment from '../components/NewComment.vue'
 
 import CommentContainer from '../components/CommentContainer.vue'
 
+import { getComentarios } from '@/firebase/comentarios'
+
 import { deleteComment } from '../firebase/posts.js'
 
 const props = defineProps({
@@ -19,6 +21,8 @@ const tranFecha = (fecha) => {
     let fechaformateada = new Date(fecha).toTimeString()
     return fechaformateada
 }
+
+console.log(getComentarios())
 
 </script>
 
@@ -82,8 +86,10 @@ const tranFecha = (fecha) => {
 
 .fecha {
   font-size: 0.7rem;
-  border-radius: 0 0 6px 6px;
+  margin-top: 0.05rem;
 }
+
+
 
 button {
   width: 2rem;

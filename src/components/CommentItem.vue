@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-<div class="text-center rounded bg-dark text-white mt-1">
+<div class="text-center rounded bg-dark text-white">
 
 <div class="cardHeader">
 
@@ -24,3 +24,13 @@ const props = defineProps({
 
 
 </template>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+</style>
