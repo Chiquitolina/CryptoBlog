@@ -28,9 +28,9 @@ console.log(getComentarios())
 
 <template>
 
-<div class="card mt-2 con">
+<div class="card mt-2 con" v-motion-fade :delay="300" style="border: none;">
 
-<div class="bg-dark author text-white text-center"><span style="font-weight: bold;">{{ post.name }}</span></div>
+<div class="bg-white author text-dark text-center"><span style="font-weight: bold;">{{ post.name }}</span></div>
 
 <div class="bg-dark text-white text-center titpost"><span>{{ post.titulo }}</span></div>
 

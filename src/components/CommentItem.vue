@@ -8,11 +8,11 @@ const props = defineProps({
 </script>
 
 <template>
-<div class="text-center rounded bg-dark text-white">
+<div class="text-center bg-dark text-white border rounded">
 
 <div class="cardHeader">
 
-<p> Comment from: {{comentario.name}}</p>
+<p>{{comentario.name}}</p>
 </div>
 <div class="cardContent">
 

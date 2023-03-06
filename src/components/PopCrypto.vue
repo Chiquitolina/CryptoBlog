@@ -66,11 +66,6 @@ onMounted(() => {
   </div>
 </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <FullData />
-  </div>
-
 </template>
 
 <style scoped>

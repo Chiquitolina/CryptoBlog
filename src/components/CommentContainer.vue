@@ -27,11 +27,15 @@ onMounted( () => {
 
 <template>
 
-<div style="border: 3px solid;">
+<div>
 
 {{actualizarComentarios}}
 
-<p class="bg-dark text-white com text-center">Comentarios {{ comentariosWithId.length }}</p>
+<div class="d-flex bg-dark align-items-center justify-content-around">
+
+<p class="text-white com text-center mb-0 border rounded p-2">Comentarios: {{ comentariosWithId.length }}</p> <button class="btn btn-primary">Show comments</button>
+
+</div>
 
 <CommentItem v-for="comentario in comentariosWithId" :comentario="comentario" :key="comentario.id" />
 
@@ -49,8 +53,7 @@ onMounted( () => {
 
 .com {
   font-size: 0.9rem;
-  margin-top: 0.05rem;
-  border-radius: 0 0 6px 6px;
+  margin-top: 0.08rem;
 }
 
 </style>
