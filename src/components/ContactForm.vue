@@ -5,7 +5,7 @@
 
 <template>
 
-<div class=" formcon d-flex flex-column align-items-center w-75" style="background-color: white">
+<div class=" formcon d-flex flex-column align-items-center w-25" style="background-color: white">
       <form  class="w-75">
   <div class="form-group">
     <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name" required>
@@ -30,7 +30,7 @@
 
 .formcon {
   border-radius: 1rem;
-  margin-top: -10rem;
+
 }
 
 input, textarea, button {

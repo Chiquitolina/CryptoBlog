@@ -1,8 +1,10 @@
 <template>
   <main>
   <div class="text-center position-absolute text-black titulo w-100 text-white">
-    <h2 class="text-black" style="font-family: Roboto; font-size: 3rem;">ABOUT US</h2>
-    <h4>We are an <span class="bg-dark rounded p-1">information hub</span> that provides all the <span class="bg-dark rounded p-1">analytics, information, and education</span> you need to make informed investment decisions.</h4>
+    <h1 style="font-family: Inter; font-weight: bolder;" class="text-black mb-2">AboutUs</h1>
+    <div class="w-100 text-center d-flex justify-content-center">
+    <h4 class="w-75" v-motion-fade :delay="200">We are an <span class="rounded pad" v-motion-fade :delay="500">information hub</span> that provides all the <span v-motion-fade :delay="700">analytics</span>, <span v-motion-fade :delay="1100">information</span>, and <span v-motion-fade :delay="1400">education</span> you need to make informed investment decisions.</h4>
+    </div>
   </div>
     <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%;">
   <div class="text-white" style="background-color: black">
@@ -10,7 +12,7 @@
   </div>
 
   <div class="w-75 d-flex flex-wrap justify-content-around cont">
-    <div class="flip-card">
+    <div class="flip-card" v-motion-fade :delay="700">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <h4>Analitycs</h4>
@@ -24,7 +26,7 @@
   </div>
 </div>
 
-<div class="flip-card">
+<div class="flip-card" v-motion-fade :delay="1100">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <h4>Information</h4>
@@ -38,7 +40,7 @@
   </div>
 </div>
 
-<div class="flip-card">
+<div class="flip-card" v-motion-fade :delay="1400">
   <div class="flip-card-inner">
     <div class="flip-card-front">
       <h4>Education</h4>
@@ -100,6 +102,7 @@ main {
   width: 16rem;
   height: 20rem;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  margin-top: 1rem;
 }
 
 /* This container is needed to position the front and back side */
@@ -137,5 +140,9 @@ main {
 .flip-card-back {
   color: white;
   transform: rotateY(180deg);
+}
+
+.pad {
+  padding: 0.1rem;
 }
 </style>
