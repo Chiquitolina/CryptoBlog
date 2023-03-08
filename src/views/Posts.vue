@@ -40,9 +40,6 @@ const addNewComment = () => {
 
   <main>
 
-    <div class="text-center position-absolute text-black titulo w-100 text-center">
-      <h1 style="font-family: Roboto; font-size: 3rem;">POSTS</h1>
-    </div>
     <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 13.5rem;">
 
 
