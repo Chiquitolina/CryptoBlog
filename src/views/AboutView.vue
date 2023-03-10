@@ -1,6 +1,5 @@
 <template>
   <main>
-    <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%;">
   <div class="text-center text-white titulo w-100 text-white justify-content-around align-items-center" style="margin-top: -14rem;">
     <h1 style="font-family: Inter; font-weight: bolder; font-size: 6rem;" class="text-white w-100" v-motion-slide-left :delay="500">AboutUs</h1>
     <div class="">
