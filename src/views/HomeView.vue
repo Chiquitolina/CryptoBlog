@@ -15,37 +15,55 @@ import PopCrypto from '../components/PopCrypto.vue'
 
 <template>
   <div class="text-white" style="background-color: black">
-  <div class="text-center w-100 text-center pt-5 pb-5" v-motion-fade :delay="300">
-    <h1 style="font-family: Inter; font-weight: bolder; font-size: 3rem;">TheCryptoBlog</h1>
-  </div>
+    <div class="text-center w-100 text-center pt-5 pb-5" v-motion-fade :delay="300">
+      <h1 style="font-family: Inter; font-weight: bolder; font-size: 3rem;">TheCryptoBlog</h1>
+    </div>
 
-  <div class="container d-flex flex-wrap">
+    <div class="container d-flex flex-wrap">
 
-    <div class="w-100 d-flex justify-content-around aaa" v-motion-fade :delay="600">
+      <div class="w-100 d-flex justify-content-around aaa" v-motion-fade :delay="600">
 
-      <PopCrypto />
+        <PopCrypto />
 
-      <div class=" d-flex flex-column align-items-center justify-content-center singuptextcont bg-dark text-white"
-        style="border-radius: 5rem;">
+        <div class=" d-flex flex-column align-items-center justify-content-center singuptextcont bg-dark text-white"
+          style="border-radius: 5rem;">
 
-        <h1 class="w-50 signuptext">Sign up now to access all the available data</h1>
+          <h1 class="w-50 signuptext">Sign up now to access all the available data</h1>
 
-        <button button type="button" class="btn botoneshome mt-3 w-75" data-bs-toggle="modal"
-          data-bs-target="#exampleModal">Get started!</button>
+          <button button type="button" class="btn botoneshome mt-3 w-75" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">Get started!</button>
+
+        </div>
 
       </div>
+    </div>
 
+    <div class="w-100 d-flex justify-content-around align-items-center flex-wrap text-white">
+      <div class="text-center mt-3 asd " v-motion-slide-visible-once-left :delay="600">
+        <p style="font-weight: bold; font-size: 2rem; font-family: Inter;">CryptoBlog</p>
+        <p style="font-family: Roboto; font-size: 2.5rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
+      </div>
+      <img class="mt-4" src="../assets/trading.jpg" id="imghome" v-motion-slide-visible-once-right :delay="600">
     </div>
   </div>
 
-  <div class="w-100 d-flex justify-content-around align-items-center flex-wrap text-white">
-    <div class="text-center mt-3 asd " v-motion-slide-visible-once-left :delay="600">
-      <p style="font-weight: bold; font-size: 2rem; font-family: Inter;">CryptoBlog</p>
-      <p style="font-family: Roboto; font-size: 2.5rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
-    </div>
-    <img class="mt-4" src="../assets/trading.jpg" id="imghome" v-motion-slide-visible-once-right :delay="600">
+  <div class="w-100 bg-black d-flex justify-content-center" v-motion-fade-visible-once :delay="600">
+    <PopEx />
   </div>
-</div>
+
+  <div class="pt-4 bg-black d-flex flex-column justify-content-center text-white align-items-center w-100">
+    <button type="button" class="btn botoneshome" data-bs-toggle="modal" data-bs-target="#exampleModal">Log in</button>
+
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <Login />
+    </div>
+
+    <p class="mt-2" style="font-family: Inter; font-weight:bolder">or</p>
+    <button type="button" class="btn botoneshome" disabled>Register</button>
+    <p>To acces the full data</p>
+  </div>
 </template>
 
 <!--
@@ -204,6 +222,7 @@ table {
 
   .asd {
     width: 35%;
+    padding: 3rem;
     height: 100%;
     display: flex;
     flex-direction: column;
