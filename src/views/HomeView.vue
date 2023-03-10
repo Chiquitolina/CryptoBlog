@@ -18,7 +18,7 @@ import PopCrypto from '../components/PopCrypto.vue'
 <main class=" text-white text-center" style="background-color: black;">
 
 <div class="text-center tit text-black w-100 text-center text-white"  v-motion-fade :delay="300">
-<h1 style="font-family: Inter; font-weight: bolder;">TheCryptoBlog</h1>
+<h1 style="font-family: Inter; font-weight: bolder; font-size: 3rem;">TheCryptoBlog</h1>
   </div>
     <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 9.5rem;">
  

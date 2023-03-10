@@ -4,7 +4,7 @@
   <div class="text-center text-white titulo w-100 text-white justify-content-around align-items-center" style="margin-top: -14rem;">
     <h1 style="font-family: Inter; font-weight: bolder; font-size: 6rem;" class="text-white w-100" v-motion-slide-left :delay="500">AboutUs</h1>
     <div class="">
-    <h4 v-motion-fade :delay="200">We are an <span class="rounded pad" v-motion-fade :delay="500">information hub</span> that provides all the <span v-motion-fade :delay="700">analytics</span>, <span v-motion-fade :delay="1100">information</span>, and <span v-motion-fade :delay="1400">education</span> you need to make informed investment decisions.</h4>
+    <h4 v-motion-fade :delay="200">We are an information hub that provides all the analytics, information, and you need to make informed investment decisions.</h4>
     </div>
   </div>
   <div class="text-white" style="background-color: black">

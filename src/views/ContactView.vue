@@ -6,10 +6,10 @@ import ContactForm from '../components/ContactForm.vue'
 <template>
   <main>
     <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%;">
-    <div class="w-100 d-flex justify-content-around " style="margin-top: -10rem;">
-      <div class=" w-25 text-center">
-      <h1 style="font-family: Inter; font-weight: bolder; font-size: 6rem;" class="text-white" v-motion-slide-left :delay="500">ContactUs</h1>
-      <div class="text-start mt-5 text-white">
+    <div class="w-100 d-flex justify-content-around flex-wrap" style="margin-top: -10rem;">
+      <div class=" w-50 text-center">
+      <h1 style="font-family: Inter; font-weight: bolder;" class="text-white tit" v-motion-slide-left :delay="500">ContactUs</h1>
+      <div class="text-start w-75 mt-5 text-white">
       <h3>¿Tiene preguntas?</h3>
       <h5>Puede ponerse en contacto con nosotros a través del siguiente formulario.</h5>
     </div>
@@ -23,6 +23,10 @@ import ContactForm from '../components/ContactForm.vue'
 </template>
 
 <style scoped>
+
+.tit {
+  font-size: 6rem;
+}
 .titulo {
   margin-top: 0.6;
   z-index: 12;
@@ -32,6 +36,30 @@ import ContactForm from '../components/ContactForm.vue'
 main {
   min-height: 91vh;
   background-color: black;
+}
+
+@media (max-width: 1024px) {
+  .tit {
+    font-size: 4.5rem
+  }
+}
+
+@media (max-width: 768px) {
+  .tit {
+    font-size: 4rem
+  }
+}
+
+  @media (max-width: 670px) {
+  .tit {
+    font-size: 3rem
+  }
+}
+
+@media (max-width: 500px) {
+  .tit {
+    font-size: 2.8rem
+  }
 }
 </style>
 
