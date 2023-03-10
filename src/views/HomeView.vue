@@ -14,30 +14,38 @@ import PopCrypto from '../components/PopCrypto.vue'
 </script>
 
 <template>
+  <div class="text-white" style="background-color: black">
+  <div class="text-center w-100 text-center pt-5 pb-5" v-motion-fade :delay="300">
+    <h1 style="font-family: Inter; font-weight: bolder; font-size: 3rem;">TheCryptoBlog</h1>
+  </div>
 
+  <div class="container d-flex flex-wrap">
 
-<div class="text-centerw-100 text-center"  v-motion-fade :delay="300">
-<h1 style="font-family: Inter; font-weight: bolder; font-size: 3rem;">TheCryptoBlog</h1>
+    <div class="w-100 d-flex justify-content-around aaa" v-motion-fade :delay="600">
+
+      <PopCrypto />
+
+      <div class=" d-flex flex-column align-items-center justify-content-center singuptextcont bg-dark text-white"
+        style="border-radius: 5rem;">
+
+        <h1 class="w-50 signuptext">Sign up now to access all the available data</h1>
+
+        <button button type="button" class="btn botoneshome mt-3 w-75" data-bs-toggle="modal"
+          data-bs-target="#exampleModal">Get started!</button>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="w-100 d-flex justify-content-around align-items-center flex-wrap text-white">
+    <div class="text-center mt-3 asd " v-motion-slide-visible-once-left :delay="600">
+      <p style="font-weight: bold; font-size: 2rem; font-family: Inter;">CryptoBlog</p>
+      <p style="font-family: Roboto; font-size: 2.5rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
+    </div>
+    <img class="mt-4" src="../assets/trading.jpg" id="imghome" v-motion-slide-visible-once-right :delay="600">
+  </div>
 </div>
-
-<div class="container d-flex flex-wrap">
-
-<div class="w-100 d-flex justify-content-around aaa" v-motion-fade :delay="600">
-
-<PopCrypto />
-
-<div class=" d-flex flex-column align-items-center justify-content-center singuptextcont bg-dark" style="border-radius: 5rem;">
-
-  <h1 class="w-50 signuptext">Sign up now to access all the available data</h1>
-
-  <button button type="button" class="btn botoneshome mt-3 w-75" data-bs-toggle="modal" data-bs-target="#exampleModal">Get started!</button>
-
-</div>
-
-</div>
-</div>
-
-
 </template>
 
 <!--
@@ -99,11 +107,10 @@ import PopCrypto from '../components/PopCrypto.vue'
 -->
 
 <style scoped>
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .singuptextcont {
@@ -126,12 +133,12 @@ import PopCrypto from '../components/PopCrypto.vue'
 
 .titulo {
   margin-top: 0.3;
-  z-index: 12; 
+  z-index: 12;
   font-family: Roboto;
 }
 
 .transparent {
-  background-color:rgba(255, 255, 255, 0.8)
+  background-color: rgba(255, 255, 255, 0.8)
 }
 
 .modal {
@@ -139,9 +146,9 @@ import PopCrypto from '../components/PopCrypto.vue'
 }
 
 #imghome {
-  width: 85%; 
+  width: 85%;
   border-radius: 30px;
-  
+
 }
 
 .tit {
@@ -149,7 +156,8 @@ import PopCrypto from '../components/PopCrypto.vue'
   font-size: 1rem;
 }
 
-input[type=password], .form-check {
+input[type=password],
+.form-check {
   margin-top: 1rem;
 }
 
@@ -171,8 +179,8 @@ table {
 }
 
 .cardi {
-min-height: auto;
-width: 100%;
+  min-height: auto;
+  width: 100%;
 }
 
 .btndata {
@@ -187,7 +195,7 @@ width: 100%;
 
 @media (min-width: 1200px) {
   #imghome {
-    width: 55%;
+    width: 45%;
   }
 
   .botoneshome {
@@ -206,19 +214,18 @@ width: 100%;
 }
 
 @media (max-width: 768px) {
-   .signuptext {
+  .signuptext {
     font-size: 1.2rem;
-   }
+  }
 
-   .aaa {
+  .aaa {
     display: flex;
     flex-wrap: wrap;
-   }
+  }
 
-   
+
 
 }
-
 </style>
 
 

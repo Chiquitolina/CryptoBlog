@@ -5,7 +5,7 @@ import ContactForm from '../components/ContactForm.vue'
 </script>
 <template>
   <main>
-    <div class="w-100 d-flex justify-content-around flex-wrap" style="margin-top: -10rem;">
+    <div class="w-100 d-flex justify-content-around flex-wrap">
       <div class=" w-50 text-center">
       <h1 style="font-family: Inter; font-weight: bolder;" class="text-white tit" v-motion-slide-left :delay="500">ContactUs</h1>
       <div class="text-start w-75 mt-5 text-white">
@@ -13,8 +13,8 @@ import ContactForm from '../components/ContactForm.vue'
       <h5>Puede ponerse en contacto con nosotros a través del siguiente formulario.</h5>
     </div>
     </div>
-
-      <ContactForm v-motion-fade v-motion-slide-right :delay="1000" />
+    
+      <ContactForm style="border: 3px solid red;" v-motion-fade v-motion-slide-right :delay="1000" />
 
 
     </div>
