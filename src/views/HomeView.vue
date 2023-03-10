@@ -20,12 +20,11 @@ import PopCrypto from '../components/PopCrypto.vue'
 <div class="text-center tit text-black w-100 text-center text-white"  v-motion-fade :delay="300">
 <h1 style="font-family: Inter; font-weight: bolder; font-size: 3rem;">TheCryptoBlog</h1>
   </div>
-    <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 9.5rem;">
  
     
     <div class="container d-flex flex-wrap">
 
-      <div class="w-100 d-flex justify-content-around mt-3 aaa" v-motion-fade :delay="600">
+      <div class="w-100 d-flex justify-content-around aaa" v-motion-fade :delay="600">
       
       <PopCrypto />
 
@@ -39,12 +38,12 @@ import PopCrypto from '../components/PopCrypto.vue'
 
     </div>
 
-<div class="mt-5 w-100 d-flex justify-content-around align-items-center flex-wrap">
+<div class="w-100 d-flex justify-content-around align-items-center flex-wrap">
 <div class="text-center mt-3 asd " v-motion-slide-visible-once-left :delay="600">
 <p style="font-weight: bold; font-size: 2rem; font-family: Inter;">CryptoBlog</p>
 <p style="font-family: Roboto; font-size: 2.5rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
 </div>
-<img  src="../assets/trading.jpg" id="imghome" v-motion-slide-visible-once-right :delay="600">
+<img src="../assets/trading.jpg" id="imghome" v-motion-slide-visible-once-right :delay="600">
 </div>
 
 <div class="w-100" v-motion-fade-visible-once :delay="600"> 
@@ -117,8 +116,6 @@ import PopCrypto from '../components/PopCrypto.vue'
 }
 
 .tit {
-  position: absolute;
-  top: 6rem;
   font-family: Inter;
   font-size: 1rem;
 }

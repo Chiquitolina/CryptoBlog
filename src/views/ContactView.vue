@@ -5,7 +5,8 @@ import ContactForm from '../components/ContactForm.vue'
 </script>
 <template>
   <main>
-    <div class="w-100 d-flex justify-content-around flex-wrap">
+    <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%;">
+    <div class="w-100 d-flex justify-content-around flex-wrap" style="margin-top: -10rem;">
       <div class=" w-50 text-center">
       <h1 style="font-family: Inter; font-weight: bolder;" class="text-white tit" v-motion-slide-left :delay="500">ContactUs</h1>
       <div class="text-start w-75 mt-5 text-white">
