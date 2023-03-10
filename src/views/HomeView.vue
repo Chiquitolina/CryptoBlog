@@ -13,6 +13,34 @@ import PopCrypto from '../components/PopCrypto.vue'
 
 </script>
 
+<template>
+
+
+<div class="text-centerw-100 text-center"  v-motion-fade :delay="300">
+<h1 style="font-family: Inter; font-weight: bolder; font-size: 3rem;">TheCryptoBlog</h1>
+</div>
+
+<div class="container d-flex flex-wrap">
+
+<div class="w-100 d-flex justify-content-around aaa" v-motion-fade :delay="600">
+
+<PopCrypto />
+
+<div class=" d-flex flex-column align-items-center justify-content-center singuptextcont bg-dark" style="border-radius: 5rem;">
+
+  <h1 class="w-50 signuptext">Sign up now to access all the available data</h1>
+
+  <button button type="button" class="btn botoneshome mt-3 w-75" data-bs-toggle="modal" data-bs-target="#exampleModal">Get started!</button>
+
+</div>
+
+</div>
+</div>
+
+
+</template>
+
+<!--
 <template style="background-color:black;">
 
 <main class=" text-white text-center" style="background-color: black;">
@@ -53,9 +81,9 @@ import PopCrypto from '../components/PopCrypto.vue'
 </div>
 <div class="mt-4">
     <button type="button" class="btn botoneshome" data-bs-toggle="modal" data-bs-target="#exampleModal">Log in</button>
-    <!-- Button trigger modal -->
 
-<!-- Modal -->
+
+
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <Login />
 </div>
@@ -68,6 +96,7 @@ import PopCrypto from '../components/PopCrypto.vue'
   </main>
   
 </template>
+-->
 
 <style scoped>
 
