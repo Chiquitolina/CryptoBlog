@@ -42,7 +42,7 @@ const addNewComment = () => {
     <h1 style="font-family: Inter; font-weight: bolder;" class="w-75 text-start tit w-50 text-white" v-motion-slide-left
           :delay="500">LatestPost</h1>
 
-    <div class="cardContainer w-100 d-flex flex-column align-items-center">
+    <div class="cardContainer w-100 d-flex flex-column align-items-center mt-3">
 
       <!-- Button trigger modal -->
 
