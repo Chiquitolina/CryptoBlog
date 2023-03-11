@@ -39,7 +39,7 @@ import PopCrypto from '../components/PopCrypto.vue'
     </div>
 
     <div class="w-100 d-flex justify-content-around align-items-center flex-wrap text-white">
-      <div class="text-center mt-3 asd " v-motion-slide-visible-once-left :delay="600">
+      <div class="text-center mt-3 asd " v-motion-slide-left :delay="600">
         <p style="font-weight: bold; font-size: 2rem; font-family: Inter;">CryptoBlog</p>
         <p style="font-family: Roboto; font-size: 2.5rem">YOUR CRYPTO DATA ANALYTICS BLOG</p>
       </div>
@@ -47,7 +47,7 @@ import PopCrypto from '../components/PopCrypto.vue'
     </div>
   </div>
 
-  <div class="w-100 bg-black d-flex justify-content-center" v-motion-fade-visible-once :delay="600">
+  <div class="w-100 bg-black d-flex justify-content-center">
     <PopEx />
   </div>
 
@@ -213,7 +213,7 @@ table {
 
 @media (min-width: 1200px) {
   #imghome {
-    width: 45%;
+    width: 35%;
   }
 
   .botoneshome {
@@ -221,7 +221,7 @@ table {
   }
 
   .asd {
-    width: 35%;
+    width: 40%;
     padding: 3rem;
     height: 100%;
     display: flex;
