@@ -7,7 +7,7 @@ import user from '../store/profile.js'
 import NewPost from '../components/NewPost.vue'
 import PostItem from '../components/PostItem.vue'
 
-import  { posts } from '../store/comments.js'
+import { posts } from '../store/comments.js'
 
 const name = ref('')
 const email = ref('')
@@ -37,11 +37,10 @@ const addNewComment = () => {
 </script>
 
 <template>
-
   <main>
 
-    <img id="ellipse" src="../assets/h2.png" style="max-width: 100%; width: 100%; height: 13.5rem;">
-
+    <h1 style="font-family: Inter; font-weight: bolder;" class="w-75 text-start tit w-50 text-white" v-motion-slide-left
+          :delay="500">LatestPost</h1>
 
     <div class="cardContainer w-100 d-flex flex-column align-items-center">
 
@@ -63,16 +62,14 @@ const addNewComment = () => {
 
       <div class="w-75 d-flex flex-wrap justify-content-around mt-3">
 
-      <PostItem class="mb-4" style="width: 100%;" v-for="post in posts" :post="post" />
+        <PostItem class="mb-4" style="width: 100%;" v-for="post in posts" :post="post" />
 
-    </div>
+      </div>
 
     </div>
 
 
   </main>
-
-
 </template>
 
 
@@ -82,6 +79,11 @@ const addNewComment = () => {
   padding: 0;
   box-sizing: border-box;
 }
+
+.tit {
+  font-size: 6rem;
+}
+
 
 .modal {
   margin-top: 3rem;
@@ -101,9 +103,7 @@ main {
   min-height: 91vh;
 }
 
-.cardContainer {
-  margin-top: -9rem;
-}
+.cardContainer {}
 
 button {
   width: 2rem;
