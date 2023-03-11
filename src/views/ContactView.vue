@@ -7,10 +7,10 @@ import ContactForm from '../components/ContactForm.vue'
 <template>
   <main class="text-white d-flex flex-wrap">
 
-    <div class=" w-100 text-center d-flex align-items-center flex-wrap">
-      <div class="w-50 g">
+    <div class=" w-100 text-center d-flex align-items-center flex-wrap mt-5">
+      <div class="w-50 ">
         <h1 style="font-family: Inter; font-weight: bolder;" class="w-50 text-center tit w-50" v-motion-slide-left
-          :delay="500">ContactUs</h1>
+          :delay="500">Contact</h1>
         <div class="text-start w-50 mt-5">
           <h3>¿Tiene preguntas?</h3>
           <h5>Puede ponerse en contacto con nosotros a través del siguiente formulario.</h5>

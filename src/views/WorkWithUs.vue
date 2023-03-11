@@ -5,8 +5,9 @@
 
 <template>
   <main class="text-white">
+    
 
-    <h1 style="font-family: Inter; font-weight: bolder;" class="w-50 text-center tit w-50 pt-5 pb-5" v-motion-slide-left
+    <h1 style="font-family: Inter; font-weight: bolder;" class="w-100 text-center tit w-50 pt-5 pb-5" v-motion-slide-left
           :delay="500">WorkWithUs</h1>
 
     <h3 class="w-100 text-center" style="font-style: italic; font-weight: lighter;">Positions found: 0</h3>
