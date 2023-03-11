@@ -53,6 +53,7 @@ import ContactForm from '../components/ContactForm.vue'
   box-sizing: border-box;
 }
 
+
 .contform {
   padding-top: 6rem;
 }
