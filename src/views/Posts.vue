@@ -134,4 +134,29 @@ button {
   font-size: 0.7rem;
   border-radius: 0 0 6px 6px;
 }
+
+
+@media (max-width: 1024px) {
+  .tit {
+    font-size: 4.5rem
+  }
+}
+
+@media (max-width: 768px) {
+  .tit {
+    font-size: 4rem
+  }
+}
+
+@media (max-width: 670px) {
+  .tit {
+    font-size: 3rem
+  }
+}
+
+@media (max-width: 500px) {
+  .tit {
+    font-size: 2.8rem
+  }
+}
 </style>
