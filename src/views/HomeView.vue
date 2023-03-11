@@ -14,6 +14,7 @@ import PopCrypto from '../components/PopCrypto.vue'
 </script>
 
 <template>
+  <main>
   <div class="text-white" style="background-color: black">
     <div class="text-center w-100 text-center pt-5 pb-5" v-motion-fade :delay="300">
       <h1 style="font-family: Inter; font-weight: bolder; font-size: 3rem;">TheCryptoBlog</h1>
@@ -64,6 +65,7 @@ import PopCrypto from '../components/PopCrypto.vue'
     <button type="button" class="btn botoneshome" disabled>Register</button>
     <p>To acces the full data</p>
   </div>
+</main>
 </template>
 
 <!--
